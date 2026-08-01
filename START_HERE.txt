@@ -1,0 +1,62 @@
+MOMMY'S LIST - START HERE
+=========================
+
+LIVE WEBSITE
+https://mommys-list-california.netlify.app
+
+GITHUB REPOSITORY
+https://github.com/Tyrrellkdlemons/mommys-list-california
+
+FASTEST WAY TO OPEN THE LOCAL WEBSITE
+1. Find index.html in this folder.
+2. Double-click it.
+3. The website will open in your default browser.
+
+WHERE TO GO
+- index.html
+  The complete website. Keep this file at the top level of the folder.
+
+- README.md
+  The main project map. GitHub displays this file automatically.
+
+- docs\OWNER_GUIDE.md
+  How accounts, Dad mode, resources, profiles, and Baby Shower tools work.
+
+- docs\EDITING_GUIDE.md
+  How to safely change wording, colors, resources, cards, and the logo.
+
+- docs\RELEASE_GUIDE.md
+  How to check, preview, commit, push, and deploy the website.
+
+- docs\TROUBLESHOOTING.md
+  What to do when a change, login, preview, Git command, or deploy is not working.
+
+- docs\TECHNICAL_REFERENCE.md
+  Storage keys, architecture, data structures, and technical details.
+
+- docs\RESOURCE_CATALOG.md
+  A readable list of all 24 California resource links.
+
+- docs\PROJECT_HISTORY.md
+  What was built, verified, fixed, and published.
+
+- assets\branding\mommys-list-logo-original.jpg
+  The original logo source. Replacing this file alone does not update the site;
+  follow the logo directions in docs\EDITING_GUIDE.md.
+
+- scripts\verify-project.mjs
+  Checks the complete project before publishing.
+
+IMPORTANT
+- Do not move index.html.
+- Do not move or manually edit the hidden .git or .netlify folders.
+- Do not store passwords, access tokens, or private family data in this folder.
+- Browser accounts are local to that browser and do not sync between devices.
+
+FIRST CHECK COMMAND
+Open PowerShell in this folder and run:
+
+node .\scripts\verify-project.mjs
+
+If it reports that every check passed, the project structure and main site data
+are in good shape.

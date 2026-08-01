@@ -1,2 +1,10 @@
-# Local Netlify folder
-.netlify
+# Local Netlify project link and generated state
+.netlify/
+
+# Local dependency, editor, operating-system, and scratch files
+node_modules/
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
