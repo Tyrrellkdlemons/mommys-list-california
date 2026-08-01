@@ -2477,6 +2477,10 @@
     (function () {
       "use strict";
 
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
+
       var STORAGE = {
         users: "mommyslist_users_v2",
         session: "mommyslist_session_v2",
