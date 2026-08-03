@@ -170,7 +170,9 @@ for (const key of ["mommyslist_users_v2", "mommyslist_session_v2", "mommyslist_d
   check(applicationScript.includes(key), `Missing browser storage key: ${key}`);
 }
 
-const externalLinks = [...html.matchAll(/<link[^>]+href=["'](https?:\/\/[^"']+)["']/gi)].map((match) => match[1]);
+const externalLinks = [...html.matchAll(/<link[^>]+href=["'](https?:\/\/[^"']+)["']/gi)]
+  .filter((match) => !/\brel=["']canonical["']/i.test(match[0]))
+  .map((match) => match[1]);
 const allowedExternalLink = /^(?:https:\/\/fonts\.googleapis\.com|https:\/\/fonts\.gstatic\.com|https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/font-awesome\/6\.5\.0\/css\/all\.min\.css)/;
 for (const url of externalLinks) {
   check(allowedExternalLink.test(url), `Unexpected external presentation dependency: ${url}`);
